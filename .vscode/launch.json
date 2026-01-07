@@ -16,5 +16,11 @@
             "request": "launch",
             "mainClass": "UserTest"
         },
+        {
+            "type": "java",
+            "name": "Launch NetworkTest",
+            "request": "launch",
+            "mainClass": "NetworkTest"
+        },
     ]
 }
