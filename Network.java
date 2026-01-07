@@ -156,10 +156,9 @@ public class Network {
     // follow.
     public String toString() {
         StringBuilder out = new StringBuilder("Network:");
-        out.append(System.lineSeparator());
         for (int i = 0; i < this.userCount; i++) {
-            out.append(this.users[i].toString());
             out.append(System.lineSeparator());
+            out.append(this.users[i].toString());
         }
         return out.toString();
     }
