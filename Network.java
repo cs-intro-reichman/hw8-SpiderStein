@@ -75,10 +75,10 @@ public class Network {
     public boolean addFollowee(String name1, String name2) {
         User user1 = getUser(name1);
         User user2 = getUser(name2);
-        if (user1.getName().equals(user2.getName())) {
+        if (user1 == null || user2 == null) {
             return false;
         }
-        if (user1 == null || user2 == null) {
+        if (user1.getName().equals(user2.getName())) {
             return false;
         }
         if (!user1.addFollowee(name2)) {
@@ -95,7 +95,7 @@ public class Network {
      */
     public String recommendWhoToFollow(String name) {
         User user = this.getUser(name);
-        if(user.follows(name) || user == null){
+        if (user.follows(name) || user == null) {
             return null;
         }
         int mutualCount = -1;
